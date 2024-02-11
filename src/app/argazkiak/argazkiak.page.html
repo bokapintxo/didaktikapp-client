@@ -1,0 +1,16 @@
+<ion-content [fullscreen]="true">
+  <div class="global">
+    <div class="toptitle">
+      <h1>Argazkiak</h1>
+      <h3>Abentura honetan bisitatu ditugun tokiak!</h3>
+    </div>
+    <div class="content argazkiak">
+      <h2>{{this.zoneName}}</h2>
+      <img src="assets/img/0{{this.zone}}/image1.jpg">
+      <img src="assets/img/0{{this.zone}}/image2.jpg">
+    </div>
+    <div class="bottom">
+      <ion-button class="button-primary" (click)="pushButton(); goBack()">atzera</ion-button>
+    </div>
+  </div>
+</ion-content>

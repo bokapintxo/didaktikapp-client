@@ -1,0 +1,33 @@
+<ion-content [fullscreen]="true">
+  <div class="global">
+    <div class="toptitle">
+      <h1>Hitzak lotu</h1>
+      <h3>Durangoko arausten egunak</h3>
+    </div>
+    <div class="content">
+      <div class="hflex gap20">
+        <div class="vflex w100">
+          <ion-button class="button-secondary" [class]="estilosBotones['ostirala'] === 'hitzakbtn-lila' ? 'hitzakbtn-lila' : ''" (click)="estiloaAldatu('ostirala', 'hitzakbtn-lila'); pushSecondaryButton()">Ostirala</ion-button>
+          <ion-button class="button-secondary" [class]="estilosBotones['osteguna'] === 'hitzakbtn-larrosa' ? 'hitzakbtn-larrosa' : ''" (click)="estiloaAldatu('osteguna', 'hitzakbtn-larrosa'); pushSecondaryButton()">Osteguna</ion-button>
+          <ion-button class="button-secondary" [class]="estilosBotones['2igandea'] === 'hitzakbtn-berdea' ? 'hitzakbtn-berdea' : ''" (click)="estiloaAldatu('2igandea', 'hitzakbtn-berdea'); pushSecondaryButton()">2.Igandea</ion-button>
+          <ion-button class="button-secondary" [class]="estilosBotones['astelehena'] === 'hitzakbtn-horia' ? 'hitzakbtn-horia' : ''" (click)="estiloaAldatu('astelehena', 'hitzakbtn-horia'); pushSecondaryButton()">Astelehena</ion-button>
+          <ion-button class="button-secondary" [class]="estilosBotones['asteartea'] === 'hitzakbtn-naranja' ? 'hitzakbtn-naranja' : ''" (click)="estiloaAldatu('asteartea', 'hitzakbtn-naranja'); pushSecondaryButton()">Asteartea</ion-button>
+          <ion-button class="button-secondary" [class]="estilosBotones['1igandea'] === 'hitzakbtn-gorria' ? 'hitzakbtn-gorria' : ''" (click)="estiloaAldatu('1igandea', 'hitzakbtn-gorria'); pushSecondaryButton()">1.Igandea</ion-button>
+          <ion-button class="button-secondary" [class]="estilosBotones['larunbata'] === 'hitzakbtn-urdina' ? 'hitzakbtn-urdina' : ''" (click)="estiloaAldatu('larunbata', 'hitzakbtn-urdina'); pushSecondaryButton()">Larunbata</ion-button>
+        </div>
+        <div class="vflex w100 gap10">
+          <ion-button class="button-secondary" [class]="estilosBotones['urdaiazpiko'] ? 'hitzakbtn-gorria' : ''" (click)="estiloaAldatu('urdaiazpiko', 'hitzakbtn-gorria'); pushSecondaryButton()">Urdaiazpiko errea meriendatu</ion-button>
+          <ion-button class="button-secondary" [class]="estilosBotones['mesa'] ? 'hitzakbtn-larrosa' : ''" (click)="estiloaAldatu('mesa', 'hitzakbtn-larrosa'); pushSecondaryButton()">Mesa eta zortziko karnabala</ion-button>
+          <ion-button class="button-secondary" [class]="estilosBotones['kalejira'] ? 'hitzakbtn-lila' : ''" (click)="estiloaAldatu('kalejira', 'hitzakbtn-lila'); pushSecondaryButton()">Kalejira eta umeak eskean</ion-button>
+          <ion-button class="button-secondary" [class]="estilosBotones['zezenak'] ? 'hitzakbtn-urdina' : ''" (click)="estiloaAldatu('zezenak', 'hitzakbtn-urdina'); pushSecondaryButton()">Zezenak atera</ion-button>
+          <ion-button class="button-secondary" [class]="estilosBotones['erromeria'] ? 'hitzakbtn-berdea' : ''" (click)="estiloaAldatu('erromeria', 'hitzakbtn-berdea'); pushSecondaryButton()">Erromeria eta euskal dantzak</ion-button>
+          <ion-button class="button-secondary" [class]="estilosBotones['hartza'] ? 'hitzakbtn-horia' : ''" (click)="estiloaAldatu('hartza', 'hitzakbtn-horia'); pushSecondaryButton()">Hartzaren konpartsa</ion-button>
+          <ion-button class="button-secondary" [class]="estilosBotones['surrandia'] ? 'hitzakbtn-naranja' : ''" (click)="estiloaAldatu('surrandia', 'hitzakbtn-naranja'); pushSecondaryButton()">Surrandien kalejira</ion-button>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <ion-button id="hitzaklotujarraitu2" class="button-primary button-disabled" (click)="goBack(); pushButton()">jarraitu</ion-button>
+    </div>
+  </div>
+</ion-content>

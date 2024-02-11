@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Puzzle Game</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/image-puzzle.css" rel="stylesheet" />
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/image-puzzle.js"></script>
+</head>
+
+<body>
+    <div class="puzzle">
+        <div id="collage">
+            <div id="playPanel">
+                <div style="display:inline-block; margin:auto; vertical-align:top;">
+                    <ul id="sortable" class="sortable"></ul>
+                    
+                        <p id="levelPanel" style="display:none;">
+                            <input type="radio" name="level" id="easy" checked="checked" value="3" /> <label
+                                for="easy">Easy</label>
+                        </p>
+                        <div>
+                            <!-- <button id="btnRule" type="button" class="btn" onclick="rules();">Rules</button>
+                            <button id="newPhoto" type="button" class="btn">Next Picture</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="gameOver" style="display:none;">
+                <div style="background-color: #9efca6; height: 100%; width: 100%; margin: 0; padding: 10px;">
+                    <h1 style="text-align:center">Zorionak!!</h1>
+                    <h2>Lortu duzu puzzlea egitea.</h2>
+                    <h2>Mundimenduak: <span class="stepCount">0</span> mugimendu.</h2>
+                    <h2>Denbora: <span class="timeCount">0</span> segundu</h2>
+                </div>
+            </div>
+
+            <script>
+                var images = [
+                    { src: 'img/eliza.png', title: 'eliza' },
+                ];
+
+                $(function () {
+                    var gridSize = $('#levelPanel :radio:checked').val();
+                    imagePuzzle.startGame(images, gridSize);
+                    $('#newPhoto').click(function () {
+                        //var gridSize = $('#levelPanel :radio:checked').val();
+                        var gridSize = 2;
+                        imagePuzzle.startGame(images, gridSize);
+                    });
+                });
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

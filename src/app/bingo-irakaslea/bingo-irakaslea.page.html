@@ -1,0 +1,18 @@
+<ion-content [fullscreen]="true">
+  <div class="global">
+    <div class="toptitle">
+      <h1>Bingoa</h1>
+      <h3>Esan ateratzen diren pertsonak ikasleei!</h3>
+    </div>
+    <div class="content">
+      <div class="bingo-rng">
+        <img id="rng-img">
+        <span id="rng-text">Prest?</span>
+      </div>
+    </div>
+    <div class="bottom">
+      <ion-button class="button-secondary" (click)="pushSecondaryButton(); getNewPerson()" id="rnghurrengoa">hurrengo pertsona</ion-button>
+      <ion-button class="button-primary button-disabled" (click)="pushButton(); goBack()" id="rngjarraitu">jarraitu</ion-button>
+    </div>
+  </div>
+</ion-content>

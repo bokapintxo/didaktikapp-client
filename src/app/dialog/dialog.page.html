@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <div class="global">
+    <div class="topbtns">
+      <ion-button class="button-secondary topbtn button-disabled" id="dialogimgbtn" (click)="pushSecondaryButton(); navigateImg()">Argazkiak <img src="../../assets/icon/ico_argazkiak.svg" class="topbtnico"></ion-button>
+      <ion-button class="button-secondary topbtn" (click)="pushSecondaryButton(); skip()">Saltatu <img src="../../assets/icon/ico_fastforward.svg" class="topbtnico"></ion-button>
+    </div>
+    <div class="content hbcenter">
+      <img src="../../assets/hartza.png">
+    </div>
+    <div class="bottom">
+      <div id="conversacion-container">
+        <div id="personaje-nombre">
+            <p id="personaje"></p>
+        </div>
+        <div id="personaje-mensaje" (click)="pasarMensaje()">
+            <p id="mensaje"></p>
+        </div>
+        <div id="tboxtriangle">
+            <img src="../../assets/dialog/dialog-vector.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+

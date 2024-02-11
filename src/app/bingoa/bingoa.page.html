@@ -1,0 +1,64 @@
+<ion-content [fullscreen]="true">
+  <div class="global">
+    <div class="toptitle">
+      <h1>Bingoa</h1>
+      <h3>Jolastu zuen artean denak lortu arte!</h3>
+    </div>
+    <div class="content">
+      <div class="hflex gap10">
+        <div class="bingocontainer">
+          <ion-button class="bingobtn" id="bingobtn0" (click)="toggleSakatuta(0, $event.target); pushSecondaryButton()"></ion-button>
+          <img class="bingocheck hidden" id="bingocheck0" src="../../assets/icon/o.svg" alt="check">
+          <span id="bingotext0"></span>
+        </div>
+        <div class="bingocontainer">
+          <ion-button class="bingobtn" id="bingobtn1" (click)="toggleSakatuta(1, $event.target); pushSecondaryButton()"></ion-button>
+          <img class="bingocheck hidden" id="bingocheck1" src="../../assets/icon/o.svg" alt="check">
+          <span id="bingotext1"></span>
+        </div>
+        <div class="bingocontainer">
+          <ion-button class="bingobtn" id="bingobtn2" (click)="toggleSakatuta(2, $event.target); pushSecondaryButton()"></ion-button>
+          <img class="bingocheck hidden" id="bingocheck2" src="../../assets/icon/o.svg" alt="check">
+          <span id="bingotext2"></span>
+        </div>
+      </div>
+      <div class="hflex gap10">
+        <div class="bingocontainer">
+          <ion-button class="bingobtn" id="bingobtn3" (click)="toggleSakatuta(3, $event.target); pushSecondaryButton()"></ion-button>
+          <img class="bingocheck hidden" id="bingocheck3" src="../../assets/icon/o.svg" alt="check">
+          <span id="bingotext3"></span>
+        </div>
+        <div class="bingocontainer">
+          <ion-button class="bingobtn" id="bingobtn4" (click)="toggleSakatuta(4, $event.target); pushSecondaryButton()"></ion-button>
+          <img class="bingocheck hidden" id="bingocheck4" src="../../assets/icon/o.svg" alt="check">
+          <span id="bingotext4"></span>
+        </div>
+        <div class="bingocontainer">
+          <ion-button class="bingobtn" id="bingobtn5" (click)="toggleSakatuta(5, $event.target); pushSecondaryButton()"></ion-button>
+          <img class="bingocheck hidden" id="bingocheck5" src="../../assets/icon/o.svg" alt="check">
+          <span id="bingotext5"></span>
+        </div>
+      </div>
+      <div class="hflex gap10">
+        <div class="bingocontainer">
+          <ion-button class="bingobtn" id="bingobtn6" (click)="toggleSakatuta(6, $event.target); pushSecondaryButton()"></ion-button>
+          <img class="bingocheck hidden" id="bingocheck6" src="../../assets/icon/o.svg" alt="check">
+          <span id="bingotext6"></span>
+        </div>
+        <div class="bingocontainer">
+          <ion-button class="bingobtn" id="bingobtn7" (click)="toggleSakatuta(7, $event.target); pushSecondaryButton()"></ion-button>
+          <img class="bingocheck hidden" id="bingocheck7" src="../../assets/icon/o.svg" alt="check">
+          <span id="bingotext7"></span>
+        </div>
+        <div class="bingocontainer">
+          <ion-button class="bingobtn" id="bingobtn8" (click)="toggleSakatuta(8, $event.target); pushSecondaryButton()"></ion-button>
+          <img class="bingocheck hidden" id="bingocheck8" src="../../assets/icon/o.svg" alt="check">
+          <span id="bingotext8"></span>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <ion-button class="button-primary button-disabled" id="bingojarraitu" (click)="goBack(); pushButton()">jarraitu</ion-button>
+    </div>
+  </div>
+</ion-content>

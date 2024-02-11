@@ -1,0 +1,7 @@
+{
+  "name": "didaktikapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

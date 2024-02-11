@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+  <div class="global">
+    <div class="toptitle">
+      <h1>Zenbakiak lotu</h1>
+      <h3>Erantzun galdereei zenbakiak lotu ahal izateko!</h3>
+    </div>
+    <div class="content">
+      <div class="zenbakiak-lotu-argazkia">
+        <img  id="argazkia" src="../../assets/zenbakiak-lotu/img/M0.png" alt="">
+      </div>
+    </div>
+    <div class="falloakLotu">
+      <img class="ximg" src="../../assets/icon/x.svg" alt="X">
+      <h1><span id="falloak-zenbakia">{{ falloak }}</span>/3</h1>
+    </div>
+    <div class="galdera">
+      <h3 id="momentukoGaldera"></h3>
+    </div>
+    <div class="galderak-botoiak">
+      <ion-button (click)="erantzunaBalidatu(true)" class="button-primary galderabotoiak zuzena">zuzena</ion-button>
+      <ion-button (click)="erantzunaBalidatu(false)" class="button-primary galderabotoiak okerra">okerra</ion-button>
+    </div>
+
+    <div class="bottom">
+      <ion-button id="zenbakiaklotujarraitu" class="button-primary button-disabled" (click)="navigateHome()">jarraitu</ion-button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+  <div class="global">
+    <div class="toptitle">
+      <h1>Hizki zopa</h1>
+      <h3>Aurkitu hitz guztiak!</h3>
+    </div>
+    <div class="content">
+      <tr class="zopatable" *ngFor="let row of board; let j = index">
+        <td class="zopainner" *ngFor="let char of row; let i = index" (click)="handleClick('zopainner' + i + j)" id="zopainner{{i}}{{j}}">{{ char }}</td>
+      </tr>
+    </div>
+    <div class="bottom">
+      <span class="hflex w100">
+        <span>Eskultura</span>
+        <span>Estatua</span>
+        <span>Frontoi</span>
+        <span>Geltoki</span>
+      </span>
+      <span class="hflex w100">
+        <span>Iturri</span>
+        <span>Kiosko</span>
+        <span>Parke</span>
+        <span>Tren</span>
+      </span>
+      <ion-button id="zopaJarraituBtn" class="button-primary button-disabled" (click)="pushButton(); goBack()">jarraitu</ion-button>
+    </div>
+  </div>
+</ion-content>

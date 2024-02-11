@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/*main colors*/
+$primary-color: #FF9F69;
+$primary-shadow: #90654C;
+$secondary-color: #FED179;
+$secondary-shadow: #9F8654;
+$tertiary-color: #FFE6B5;
+$tertiary-shadow: #9F8654;
+
+/*text colors*/
+$ptext-fore: #FFFFFF;
+$stext-fore: #000000;
+
+/*disabled elements*/
+$disabled-color: #E4E4E4;
+$disabled-shadow: #727272;
+
+/*correct and incorrect sign colors*/
+$check-color: #7CFF91;
+$check-shadow: #47744F;
+$x-color: #FF7C7C;
+$x-shadow: #844444;
+
+/*background color*/
+$background-color: #F5EEDF;
+
+* {
+    font-family: 'Varela Round', sans-serif;
+}
+
+ion-content {
+    --background: #F5EEDF;
+    margin:0;
+    padding:0;
+}
+
+ion-content > * {
+    color: black;
+}
+
+
+/*TEXT*/
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 5px 0;
+    padding: 0;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 0;
+}
+
+.maintitle {
+    text-align: center;
+}
+
+/*BUTTONS*/
+ion-button {
+    --ripple-color: transparent;
+    --border-radius: 10px;
+    --border-width: 2px;
+    --border-style: solid;
+    letter-spacing: normal;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+
+.button-primary {
+    --background: #FF9F69;
+    --color: white;
+    --box-shadow: 0 4px 0 0 #90654C;
+    --border-color: #90654C;
+    font-size: 2.5rem;
+    --padding: 1.5rem, 1rem;
+    font-weight: bold;
+    transition-duration: 0.3s;
+}
+
+.button-primary:active {
+    --box-shadow: 0 0px 0px 0 #90654C;
+    transform: translateY(4px);
+}
+
+.button-secondary {
+    --background: #FFE6B5;
+    --color: black;
+    --box-shadow: 0 4px 0px 0 #9F8654;
+    --border-color: #9F8654;
+    font-size: 1.15rem;
+    --padding: 0;
+    transition-duration: 0.3s;
+}
+
+.button-secondary:active {
+    --box-shadow: 0 0px 0px 0 #9F8654;
+    transform: translateY(4px);
+}
+
+.topbtn {
+    width: 150px;
+}
+
+.topbtnico {
+    margin-left: 5px;
+    max-height: 1.15rem;
+}
+
+.button-disabled {
+    --background: #E4E4E4;
+    --color: 727272;
+    --box-shadow: 0 0px 0px 0 #727272;
+    --border-color: #727272;
+    transform: translateY(4px);
+}
+
+/*LAYOUT*/
+.global {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: calc(100% - 20px);
+    padding: 20px 10px;
+    margin-left: 10px;
+}
+
+.toptitle {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.topbtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.hflex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.vflex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gap5 {
+    gap: 5px;
+}
+
+.gap10 {
+    gap: 10px;
+}
+
+.relative {
+    position: relative;
+    width: 100%;
+}
+
+.gap20 {
+    gap: 20px;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.hbcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: bottom;
+    max-height: 100%;
+    overflow-y:hidden;
+}
+
+.hbcenter > img {
+    max-height: 100%;
+}
+
+
+/*DIALOG*/
+@keyframes parpadeo {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#personaje-nombre {
+    height: 50px;
+    background-color: #FF9F69;
+    border: 2px solid #90654C;
+    width: 125px;
+    border-radius: 15px 15px 0px 0px;
+    text-shadow: 
+        -1px -1px #90654C, /* Borde superior-izquierdo */
+        1px -1px #90654C, /* Borde superior-derecho */
+        -1px  1px #90654C, /* Borde inferior-izquierdo */
+        1px  1px #90654C; /* Borde inferior-derecho */
+    color: white;
+    font-size: x-large;
+    padding-left: 10px;
+}
+
+#personaje {
+    margin-top: 0.6rem;   
+}
+
+#personaje-mensaje {
+    background-color: #FED179;
+    border: 2px solid #9F8654;
+    padding-left: 5px;
+    border-radius: 0px 15px 15px 15px;
+    height: 120px;
+    font-size: large;
+    margin-top: -4px;
+    overflow: hidden;
+    user-select: none;
+}
+
+#mensaje {
+    margin-top: 0.6rem;
+}
+
+#tboxtriangle {
+    margin-right: 10px;
+    margin-top: -25px;
+    float: right;
+    animation: parpadeo 0.9s infinite;
+}
+
+/*ARGAZKIAK*/
+.argazkiak {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.argazkiak > h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+}
+
+.argazkiak > img {
+    border-radius: 15px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border: 2px solid #90654C;
+    object-fit: cover;
+}
+
+
+/*MAPA*/
+.mapimg {
+    border-radius: 15px;
+    border: 2px solid #90654C;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+/*KREDITUAK*/
+.kredituak > h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+}
+
+.kredituak > h4 {
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    font-size: 1.10rem;
+}
+
+
+/*JOKOAK*/
+
+/*BINGO IKASLEAK*/
+.bingobtn {
+    --color: black;
+    --box-shadow: 0 4px 0px 0 #9F8654;
+    --border-color: #9F8654;
+    font-size: 1.15rem;
+    --padding: 0;
+    transition-duration: 0.3s;
+    width: 100%;
+    margin-bottom: 10px;
+    aspect-ratio: 1/1;
+    --background:none;
+    background-size:cover;
+    border-radius: 15px;
+}
+
+.bingobtn:active {
+    --box-shadow: 0 0px 0px 0 #9F8654;
+    transform: translateY(4px);
+}
+
+.bingosakatuta {
+    --box-shadow: 0 0px 0px 0 #9F8654;
+    transform: translateY(4px);
+    
+}
+
+.bingocheck {
+    height: 2rem;
+    z-index: 2;
+    top:0;
+    right:0;
+    transform: translateX(10px);
+    position:absolute;
+}
+
+.bingocontainer {
+    position: relative;
+    width: 100%;
+    padding:0;
+}
+
+/*BINGO IRAKASLEAK*/
+.bingo-rng {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#rng-text {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#rng-img {
+    border-radius: 15px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border: 2px solid #90654C;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+
+/*PUZZLE*/
+#puzzlecontainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+#puzzleframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #90654C;
+    border-radius: 15px;
+}
+
+/*HITZAK LOTU*/
+.hitzakbtn-gorria {
+    --background: #FF9999;
+    --box-shadow: 0 4px 0px 0 #895555;
+    --border-color: #895555;
+}
+
+.hitzakbtn-naranja {
+    --background: #FFCA99;
+    --box-shadow: 0 4px 0px 0 #957354;
+    --border-color: #957354;
+}
+.hitzakbtn-horia {
+    --background: #FDFF99;
+    --box-shadow: 0 4px 0px 0 #868754;
+    --border-color: #868754;
+}
+.hitzakbtn-berdea {
+    --background: #99FFA3;
+    --box-shadow: 0 4px 0px 0 #3F7848;
+    --border-color: #3F7848;
+}
+.hitzakbtn-urdina {
+    --background: #99B6FF;
+    --box-shadow: 0 4px 0px 0 #434F6D;
+    --border-color: #434F6D;
+}
+
+.hitzakbtn-lila {
+    --background: #C699FF;
+    --box-shadow: 0 4px 0px 0 #614A7E;
+    --border-color: #614A7E;
+}
+
+.hitzakbtn-larrosa {
+    --background: #FF99E9;
+    --box-shadow: 0 4px 0px 0 #77476C;
+    --border-color: #77476C;
+}
+
+
+/*HIZKI ZOPA*/
+.zopatable {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.zopainner {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #90654C;
+    background: #FED179;
+    width: 10%;
+    aspect-ratio: 1/1;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.zopacorrect {
+    background: #7CFF91;
+}
+
+.zopaselected {
+    background: #FF7C7C;
+}
+
+
+/*URKATUA*/
+.hitzakflex {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 0;
+}
+
+.behean {
+    margin-top: 10px;
+}
+
+.urkatua-hitza {
+    border-bottom: 6px solid #9F8654;
+    border-radius: 3px;
+
+    height: 55px;
+    width: 40px;
+    --color: black;
+}
+
+.urkatua-hitza > h1 {
+    text-align: center;
+}
+
+.falloak {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.ximg {
+    height: 50px;
+    margin-top: 3px;
+}
+
+.teklatua {
+    display: grid;
+    grid-template-columns: repeat(8, 11.5%);
+    grid-template-rows: repeat(4, 25%);
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.urkatua-tekla {
+    height: 60px;
+    --background: #E4E4E4;
+}
+
+.urkatua-bidali-tekla {
+    grid-column: span 5;
+    height: 60px;
+}
+
+.hidden {
+    display: none;
+}
+
+.urkatuabtn-sakatu {
+    --background: #FED179;
+    --box-shadow: 0 4px 0px 0 #9F8654;
+    --border-color: #9F8654;
+}
+  
+.urkatuabtn-zuzen {
+    --background: #7CFF91;
+    --box-shadow: 0 4px 0px 0 #47744F;
+    --border-color: #47744F;
+}
+
+.urkatuabtn-oker {
+    --background: #FF7C7C;
+    --box-shadow: 0 4px 0px 0 #844444;
+    --border-color: #844444;
+}
+
+/*LABERINTOA*/
+.kontrol-botoiak {
+    margin-bottom: 10px;
+}
+
+.geziak, .geziak-void {
+    flex:1;
+}
+.geziak-goian {
+    display: flex;
+    justify-content: center;
+}
+.geziak-erdian {
+    display: flex;
+}
+
+.center {
+    align-items: center;
+}
+
+.hartzaimg {
+    position: absolute;
+    z-index: 2;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.santamariaimg  {
+    position: absolute;
+    z-index: 1;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.laberintoa {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    border: solid 2px black;
+}
+
+.kasilla {
+    width: 50px;
+    height: 50px;
+}
+
+.border-top {
+    border-top: solid 2px black;
+}
+
+.border-right {
+    border-right: solid 2px black;
+}
+
+.border-bottom {
+    border-bottom: solid 2px black;
+}
+
+.border-left {
+    border-left: solid 2px black;
+}
+
+/*ZENBAKIAK LOTU*/
+.galderak-botoiak {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.zuzena, .okerra {
+    font-size: x-large;
+}
+
+.galdera {
+    margin: 30px 0px 10px 5px;
+    height: 80px;
+}
+
+.falloakLotu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.irabaziAnim {
+    animation: mugimendua 1s infinite alternate;
+}
+
+@keyframes mugimendua {
+    from {
+      transform: rotate(-10deg) scale(1); /* Angulo inicial */
+      left: 0; /* Posición inicial */
+    }
+    to {
+      transform: rotate(10deg) scale(1.1); /* Angulo final */
+      left: calc(100% - 100px); /* Posición final */
+    }
+  }

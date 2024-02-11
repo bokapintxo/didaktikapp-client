@@ -1,0 +1,71 @@
+<ion-content [fullscreen]="true">
+  <div class="global">
+    <div class="toptitle">
+      <h1>Urkatua</h1>
+      <h3>Zein da hurrengo geralekuaren izena?</h3>
+    </div>
+    <div class="content">
+      <div class="hitza">
+        <div class="hitzakflex">
+          <div class="urkatua-hitza">
+            <h1><span [ngClass]="{'hidden': !aukeratutakoletrak.has(hitza[0])}">{{hitza[0]}}</span></h1>
+          </div>
+          <div class="urkatua-hitza">
+            <h1><span [ngClass]="{'hidden': !aukeratutakoletrak.has(hitza[1])}">{{hitza[1]}}</span></h1>
+          </div>
+          <div class="urkatua-hitza">
+            <h1><span [ngClass]="{'hidden': !aukeratutakoletrak.has(hitza[2])}">{{hitza[2]}}</span></h1>
+          </div>
+          <div class="urkatua-hitza">
+            <h1><span [ngClass]="{'hidden': !aukeratutakoletrak.has(hitza[3])}">{{hitza[3]}}</span></h1>
+          </div>
+          <div class="urkatua-hitza">
+            <h1><span [ngClass]="{'hidden': !aukeratutakoletrak.has(hitza[4])}">{{hitza[4]}}</span></h1>
+          </div>
+          <div class="urkatua-hitza">
+            <h1><span [ngClass]="{'hidden': !aukeratutakoletrak.has(hitza[5])}">{{hitza[5]}}</span></h1>
+          </div>
+          <div class="urkatua-hitza">
+            <h1><span [ngClass]="{'hidden': !aukeratutakoletrak.has(hitza[6])}">{{hitza[6]}}</span></h1>
+          </div>
+        </div>
+        <div class="hitzakflex behean">
+          <div class="urkatua-hitza">
+            <h1><span [ngClass]="{'hidden': !aukeratutakoletrak.has(hitza[7])}">{{hitza[7]}}</span></h1>
+          </div>
+          <div class="urkatua-hitza">
+            <h1><span [ngClass]="{'hidden': !aukeratutakoletrak.has(hitza[8])}">{{hitza[8]}}</span></h1>
+          </div>
+          <div class="urkatua-hitza">
+            <h1><span [ngClass]="{'hidden': !aukeratutakoletrak.has(hitza[9])}">{{hitza[9]}}</span></h1>
+          </div>
+          <div class="urkatua-hitza">
+            <h1><span [ngClass]="{'hidden': !aukeratutakoletrak.has(hitza[10])}">{{hitza[10]}}</span></h1>
+          </div>
+          <div class="urkatua-hitza">
+            <h1><span [ngClass]="{'hidden': !aukeratutakoletrak.has(hitza[11])}">{{hitza[11]}}</span></h1>
+          </div>
+        </div>
+      </div>
+      <div class="falloak">
+        <img class="ximg" src="../../assets/icon/x.svg" alt="X">
+        <h1><span id="falloak-zenbakia">{{ falloak }}</span>/8</h1>
+      </div>
+      <div class="teklatua gap5">
+        <ion-button *ngFor="let letra of abecedario" class="button-secondary urkatua-tekla" 
+          [ngClass]="{
+            'urkatuabtn-sakatu': letraClase[letra] === 'urkatuabtn-sakatu',
+            'urkatuabtn-zuzen': letraZuzenak.has(letra),
+            'urkatuabtn-oker': letraOkerrak.has(letra)
+          }"
+          (click)="letraAukeratu(letra)">
+          <h1>{{ letra }}</h1>
+        </ion-button>
+        <ion-button class="button-primary urkatua-bidali-tekla" (click)="aukeraKonfirmatu()">Bidali</ion-button>
+      </div>
+    </div>
+    <div class="bottom">
+      <ion-button [disabled]="!hitzaAsmatuta()" class="button-primary button-disabled" (click)="goBack()">jarraitu</ion-button>
+    </div>
+  </div>
+</ion-content>
