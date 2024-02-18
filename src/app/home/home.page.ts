@@ -2,15 +2,14 @@ import { Component } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
-//import { Media } from '@ionic-native/media/ngx';
-//import { AudioService } from '../audio.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonButton],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonButton, HttpClientModule],
 })
 export class HomePage {
   audioCorrect: any;
@@ -18,7 +17,7 @@ export class HomePage {
   audioBtn: any;
   audioBtnSecondary: any;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private http:HttpClient) {}
 
   ngOnInit() {
     this.audioBtn = new Audio();
@@ -27,11 +26,33 @@ export class HomePage {
     this.audioBtnSecondary = new Audio();
     this.audioBtnSecondary.src = '../../assets/aud/btn_txikia.mp3';
 
-    this.audioCorrect = new Audio();
-    this.audioCorrect.src = '../../assets/aud/correct.mp3';
-
-    this.audioWrong = new Audio();
-    this.audioWrong.src = '../../assets/aud/wrong.mp3';
+    //connect to API
+    const link: string = 'http://bokapintxo.com:8000/api/dialogoak';
+    fetch(link)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log(data);
+      const loadingItem = document.getElementById('loading');
+      if (loadingItem) {
+        loadingItem.style.display = 'none';
+      }
+      const startButton = document.getElementById('startButton');
+      if (startButton) {
+        startButton.classList.remove('button-disabled');
+      }
+    })
+    .catch(error => {
+      const loadingItem = document.getElementById('loading');
+      if (loadingItem) {
+        loadingItem.innerText = 'Zerbitzaria ez dago erabilgarri :('
+      }
+      console.error('There has been a problem with your fetch operation:', error);
+    });
   }
 
   navigateBingoRole(): void {
