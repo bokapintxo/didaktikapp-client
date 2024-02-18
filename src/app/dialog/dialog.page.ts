@@ -44,7 +44,7 @@ export class DialogPage implements OnInit {
   }
 
   fetchConversacion(idx: number): void {
-    fetch('assets/dialog/dialog.json')
+    fetch('http://bokapintxo.com:8000/api/dialogoak')
       .then((response) => response.json())
       .then((conversacion) => {
         let val = this.dialogService.mostrarConversacion(conversacion, () => {}, idx);
@@ -95,7 +95,7 @@ export class DialogPage implements OnInit {
         }
       })
       .catch((error) =>
-        console.error('Error al cargar el archivo JSON:', error)
+        console.error('Konexioa galdu egin da :(', error)
       );
   }
 
